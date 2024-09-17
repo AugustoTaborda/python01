@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista com flask e aquele jingado</title>
+</head>
+<body>
+    <h1>informações da revista</h1>
+    <p><b><Strong>log:</Strong></b>{{ usuario.log }}</p>
+    <p><b><Strong>idade:</Strong></b>{{ usuario.idade }}</p>
+    <p><b><Strong>onde:</Strong></b>{{ usuario.onde }}</p>
+    <h2>interesses</h2>
+    <ul>
+        {% for interesses in usuario.interesses %}
+            <li>{{ interesses }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

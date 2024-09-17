@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros jinja</title>
+</head>
+<body>
+    <h1>filtros com flask e jinja</h1>
+
+    <p>miliante: {{ usuario.nome | upper }}</p>
+    <p>qual o numero do seu pisante: {{ usuario.idade | default(0) }}</p>
+    <p>cidade: {{ usuario.cidade | capitalize }}</p>
+
+    <p>Mensagem {{ mensagem | title }}</p>
+
+
+
+</body>
+</html>

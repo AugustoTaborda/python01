@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalhes{% endblock %}
+
+{% block context %}
+    <h2>Detalhes do usuario</h2>
+    <p>militante: {{ usuario.nome }}</p>
+    <p>idade: {{ usuario.idade }}</p>
+
+{% endblock %}
+

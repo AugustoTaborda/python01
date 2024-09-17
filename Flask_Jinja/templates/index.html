@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block context %}
+    <h2>Bem-vindo, {{ usuario.name | upper }}</h2>
+    <p>idade: {{ usuario.idade }}</p>
+
+    {% if esta_logado %}
+        <p>Voce esta sendo filmado {{ usuario.name }}</p>
+    {% else %}
+        <p>Faça o login.</p>
+    {% endif %}
+
+    <h3>itnes:</h3>
+    <ul>
+        {% for iten in itens %}
+            <li>{{ iten }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Dicionario de dados: </h3>
+    <p>Home: {{ dado.nome }}</p>
+    <p>Versão: {{ dado.versao }}</p>
+
+{% endblock %}
+

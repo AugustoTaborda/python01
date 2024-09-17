@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listas_revistas</title>
+</head>
+<body>
+    <h1>Lista de usuarios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idada</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+                <tr>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.idade}}</td>
+                    <td>{{usuario.cidade}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

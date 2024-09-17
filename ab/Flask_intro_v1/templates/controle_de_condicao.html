@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Condicional com fluxo</title>
+</head>
+<body>
+    <h1>ola, {{ usuario.nome }}</h1>
+    <p>numero do pisante, {{ usuario.idade }}</p>
+    <p>cidade: {{ usuario.cidade }}</p>
+
+    {% if usuario.premium %}
+        <p> Ta fazendo falta, {{ usuario.nome }} premium </p>
+    {% else %}
+        <p>Voce é um usuario, {{ usuario.nome }} Regular</p>
+    {% endif %}
+
+    {% if usuario.idade < 10 %}
+        <p>Voce é menor de idade senhor {{ usuario.nome }} .</p>
+    {% elif usuario.idade < 65 %}
+        <p>Aproveite todos os seus recursos {{ usuario.nome }}.</p>
+    {% else %}
+        <p>obrigado por perde seu tempo aqui.</p>
+    {% endif %}
+
+</body>
+</html>
